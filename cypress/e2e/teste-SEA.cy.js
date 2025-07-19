@@ -20,5 +20,8 @@ describe('Teste de cadastro de novo usuário', () => {
 
      //Verifica o campo do RG
      cy.get('input[name="rg"]').type('123456789121212131313142312412312312313431513513123');
+
+     //Verifica o campo de Adicionar EPI
+     cy.get('span.addEPI').click();
     });
   });
