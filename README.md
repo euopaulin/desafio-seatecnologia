@@ -8,10 +8,10 @@ Essa documentação tem como objetivo relatar todo o processo feito no teste de 
 
 | Ferramenta     | Função                            |
 |----------------|-----------------------------------|
-| Obsidian  | Para criar a documentação que e visualização gráfica de todo processo.      |
-| ChromeDevTools  | Para inspecionar os elementos de código do site e testar funcionalidades.     |
-| Cypress     | Para testes simples de automatização no site         |
-| VScode    | Para edição de código         |
-| Node.JS    | Para rodar o Cypress         |
+| 📝 Obsidian  | Para fazer as anotações, visualização gráfica de todo processo e auxiliar na criação da documentação presente no Readme.      |
+| 🛠️ ChromeDevTools  | Para inspecionar os elementos de código do site.     |
+| 🧪 Cypress     | Para testes simples de automatização end-to-end (E2E) na página.         |
+| 💻 VScode    | Para edição de código.        |
+| 🌐 Node.JS    | Para poder rodar o Cypress.      |
 
 ---
