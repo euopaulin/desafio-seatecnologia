@@ -36,11 +36,11 @@ Para a realização dos testes feitos nas funcionalidades da página, foram util
 
 De incio comecei testando o botão "Adicionar novo funcionario" e ocorreu tudo certo, esse botão funciona de acordo como o do prototipo.
 
-![Adicionar novo funcionario](Images\image-1.png)
+![Adicionar novo funcionario](Images/image-1.png)
 
 Após isso a página nos redireciou para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Foi testado o campo do CPF e ao digitar mais do que 11 dígitos ele fornece um erro, então o campo do CPF está funcionando bem em questão de número máximo de dígitos. Também testei a limitação de dígitos mínimos e ao digitar menos que 11 é mostrado uma mensagem para que o usuário se atente ao número de caracteres mínimos.
 
-![Mensagem caracteres CPF](<Images\Pasted image 20250719102034.png>)
+![Mensagem caracteres CPF](<Images/Pasted image 20250719102034.png>)
 
 A imagem abaixo mostrar um erro no Cypress, pois no código coloquei para ele digitar um número maior do que o permito para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
 
