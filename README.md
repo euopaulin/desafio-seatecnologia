@@ -14,7 +14,7 @@ Foram realizados testes manuais e testes automatizados, comparando as duas pági
 | 🛠️ ChromeDevTools    | Para inspecionar os elementos de código do site     |
 | 🧪 Cypress     | Para testes simples de automatização end-to-end (E2E) na página         |
 | 💻 VScode    | Para edição de código     |
-| 🌐 Node.JS    | Para poder rodar o Cypress    |
+| 🌐 Node.JS    | Versão v22.14.0 para rodar o Cypress    |
 
 ---
 
@@ -36,6 +36,6 @@ Para a realização dos testes feitos nas funcionalidades da página, foram util
 
 Separei os dois tipos de testes feitos em dois arquivos md aqui no repositorio, covê pode conferir clicando nos links abaixo:
 
-[<h2>🛠️Testes de funcionalidades</h2>](TestesFunc.md)
+## [🛠️Testes de funcionalidades](TestesFunc.md)
 
-[<h2>🎨Testes de desing</h2>](TestesDesing.md)
+## [🎨Testes de desing](TestesDesing.md)
