@@ -36,6 +36,6 @@ Para a realização dos testes feitos nas funcionalidades da página, foram util
 
 Separei os dois tipos de testes feitos em dois arquivos md aqui no repositorio, covê pode conferir clicando nos links abaixo:
 
-[<h2>🛠️Testes de funcionalidades</h2>](/TestesFunc.md)
+[<h2>🛠️Testes de funcionalidades</h2>](TestesFunc.md)
 
-[<h2>🎨Testes de desing</h2>](/TestesDesing.md)
+[<h2>🎨Testes de desing</h2>](TestesDesing.md)
