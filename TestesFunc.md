@@ -1,4 +1,4 @@
-## Testes de funcionalidades
+# ⚙️ Testes de funcionalidades 
 
 A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
 
@@ -33,11 +33,15 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
   <img src="Images/cpf letras.png" alt="Letras CPF" width="800"/>
 </p>
 
+---
+
 Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém na página o campo do RG permite digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está especificado o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100229.png" alt="Letras RG" width="470"/>
 </p>
+
+---
 
 No campo de data de nascimento é possível notar há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
 
@@ -56,11 +60,15 @@ Imagem de referência do protótipo:
   <img src="Images/Pasted image 20250719101549.png" alt="Data3" width="400">
 </p>
 
+---
+
 O campo de alteração de sexo parece funcionar bem, não indentifiquei nenhum problema.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100650.png" alt="Sexo" width="350">
 </p>
+
+---
 
 No campo onde selecionamos as EPIs em que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA, o campo não possui limite de caracteres, semelhante a falha encontrada nos campos de RG e CPF, anteriormente.
 
@@ -72,13 +80,13 @@ Também notei que não é possivel adionar a EPI 🔨. O botão de "Adicionar EP
 
 Abaixo está uma comparação entre os dois:
 
-## Protótipo: ##
+## 📝Protótipo: ##
 
 <p align="center">
   <img src="Images/Pasted image 20250719103517.png" alt="Protótipo" width="800">
 </p>
 
-## Teste: ##
+## 🧪Teste: ##
 
 <p align="center">
   <img src="Images/Pasted image 20250719104624.png" alt="Teste" width="800">
@@ -118,25 +126,35 @@ Há um erro em relação ao filtro de funcionários ativos. Quando filtrado apen
 
 Antes de ativar o filtro:
 
-![Before Filter](<Images/Pasted image 20250721081923.png>)
+<p align="center">
+  <img src="Images/Pasted image 20250721081923.png" alt="Before Filter" width="800">
+</p>
 
 Após ativar o filtro para apenas funcionários ativos:
 
-![after Filter](<Images/Pasted image 20250721082126.png>)
+<p align="center">
+  <img src="Images/Pasted image 20250721082126.png" alt="After Filter" width="500">
+</p>
 
 É possível notar que o funcionário "Sea Teste" sumiu.
 
 O campo de adicionar documento parece estar funcionando bem, consegui anexar um documento sem problemas.
 
-![Docs](<Images/Pasted image 20250721082738.png>)
+<p align="center">
+  <img src="Images/Pasted image 20250721082738.png" alt="Documento" width="800">
+</p>
 
 O menu do quanto esquerdo não está funcionando, quando seleciono alguma opção que não seja a que já estamos, nada acontece.
 
-![Left Menu](<Images/Pasted image 20250721082908.png>)
+<p align="center">
+  <img src="Images/Pasted image 20250721082908.png" alt="Menu" width="75">
+</p>
 
 E por fim, o ultimo erro que percebi foi que ao marca como etapa concluída e clicar em próximo, nada acontece. No protótipo quando fazemos esse procedimento, é nos enviado para outra etapa.
 
-![Prox](<Images/Pasted image 20250721083144.png>)
+<p align="center">
+  <img src="Images/Pasted image 20250721083144.png" alt="Próximo" width="400">
+</p>
 
 ---
 
