@@ -1,8 +1,8 @@
 # 👾 Desafio Técnico SEA Tecnologia
 
-Essa documentação tem como objetivo relatar todo o processo feito no teste de software da SEA Tecnologia. Irei explorar de forma exaustica o software e apresentar as ferramentas usadas, métodos utilizados para encontrar os bugs e reporta-los, testando sua funcionalidades, usababilidade e compatibilidade entre diferentes dispositivos e navegadores, além de sugerir possíveis soluções para essas falhas.
+Essa documentação tem como objetivo relatar todo o processo feito no teste de software da SEA Tecnologia. Irei explorar de forma exaustiva o software e apresentar as ferramentas usadas, métodos utilizados para encontrar os bugs e reportá-los, testando suas funcionalidades, usabilidade e compatibilidade entre diferentes dispositivos e navegadores, além de sugerir possíveis soluções para essas falhas.
 
-Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o prototipo. A ideia é comparar os dois e analisar se o site de teste está em conformidade com o site prototipo.
+Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o protótipo. A ideia é comparar os dois e analisar se o site de teste está em conformidade com o site protótipo.
 
 ---
 
@@ -10,12 +10,12 @@ Foram realizados testes manuais e testes automatizados, comparando as duas pági
 
 | Ferramenta       | Função                            |
 |------------------|-----------------------------------|
-| 📝 Obsidian    | Para fazer as anotações, visualização gráfica de todo processo e auxiliar na criação da documentação presente no Readme      |
+| 📝 Obsidian    | Para fazer as anotações, visualização gráfica de todo o processo e auxiliar na criação da documentação presente no README     |
 | 🛠️ ChromeDevTools    | Para inspecionar os elementos de código do site     |
-| 🧪 Cypress     | Para testes simples de automação end-to-end (E2E) na site         |
+| 🧪 Cypress     | Para testes simples de automação end-to-end (E2E) no site        |
 | 💻 VScode    | Para edição de código     |
 | 🌐 Node.JS    | Versão v22.14.0 para rodar o Cypress    |
-| 🕵️‍♂️ Nikto         | Aplicação via terminal do Linux para varredura de possiveis vunerabilidades no site |
+| 🕵️‍♂️ Nikto         | Aplicação via terminal do Linux para varredura de possíveis vulnerabilidades no site |
 
 ---
 
@@ -27,9 +27,7 @@ Começarei apresentando os testes de funcionalidades.
 
 ### Falhas de funcionalidades encontradas:
 
-Para a realização dos testes feitos nas funcionalidades da página, foram utilizado dois metodos, sendo eles: 
-
-🔴 **1** - Testes manuais, simulando um cenário real onde um usuário administrador do sistema iria preencher os campos necessários e cadastrar o novo funcionário. Esse foi o método mais utilizado nos testes.
+Para a realização dos testes feitos nas funcionalidades da página, foram utilizados dois métodos, sendo eles:
 
 🔴 **2** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
 
