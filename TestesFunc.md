@@ -2,23 +2,26 @@
 
 A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
 
-De incio comecei testando o botão "Adicionar novo funcionario" e ocorreu tudo certo, esse botão funciona de acordo como o do prototipo.
-
----
-
 ## 👷 Testando cadastrar novo funcionario:
+
+De incio comecei testando o botão "Adicionar novo funcionario" que tem como objetivo cadastrar novos funcionarios com seus dados pessoais e de acordo com o EPI que ele utiliza em sua função. 
+Quando clico no botão, ocorre tudo certo, o botão funciona de acordo como o do prototipo.
 
 <p align="center">
   <img src="Images/image-1.png" alt="Adicionar novo funcionario" width="800"/>
 </p>
 
-Após isso a página nos redireciou para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Foi testado o campo do CPF e ao digitar mais do que 11 dígitos ele fornece um erro, então o campo do CPF está funcionando bem em questão de número máximo de dígitos. Também testei a limitação de dígitos mínimos e ao digitar menos que 11 é mostrado uma mensagem para que o usuário se atente ao número de caracteres mínimos.
+Após isso a página nos redireciona para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Para testar os campos foram utilizado tanto o teste manual, quanto o automatizado com o uso de Cypress.
+
+Foi testado o campo do CPF e ao digitar mais do que 11 dígitos ele fornece um erro, então o campo do CPF está funcionando bem em questão de número máximo de dígitos. Também testei a limitação de dígitos mínimos e ao digitar menos que 11 é mostrado uma mensagem para que o usuário se atente ao número de caracteres mínimos.
+
+Porém como pode ver na imagem abaixo, eu realizei o teste digitando caracteres alfabeticos, algo que pode ser considerada uma falha para esse campo. Elaborarei isso mais para frente.
 
 <p align="center">
   <img src="Images/Pasted image 20250719102034.png" alt="Mensagem caracteres CPF" width="700"/>
 </p>
 
-A imagem abaixo mostrar um erro no Cypress, pois no código coloquei para ele digitar um número maior do que o permito para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
+A imagem abaixo mostrar um erro no Cypress, pois no código coloquei para que ele digitasse um número maior do que o permitido para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
 
 <p align="center">
   <img src="Images/Captura de tela 2025-07-19 093615.png" alt="Erro CPF" width="800"/>
@@ -33,9 +36,13 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
   <img src="Images/cpf letras.png" alt="Letras CPF" width="800"/>
 </p>
 
+Falha como essa compromete muito o funcionamento do site e a função de cadastrar novos funcionarios, pois abre brecha para que usuário sejam cadastrados com CPF errados, sendo assim uma falha critica para o site.
+
 ---
 
-Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém na página o campo do RG permite digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está especificado o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
+Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém no campo do RG é permitido digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está configurado especificando o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
+
+Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o cadastro de RG do funcionario vuneravel e muito sucetivo a erros.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100229.png" alt="Letras RG" width="470"/>
@@ -43,7 +50,10 @@ Agora no campo do RG é possível encontrar um erro de limite de caracteres. Nor
 
 ---
 
-No campo de data de nascimento é possível notar há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
+No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
+
+Mais uma falha critica no sistema de cadastro do site, que faz com qe torce o funcionamento vuneravel.
+
 
 <p align="center">
   <img src="Images/Pasted image 20250719102124.png" alt="Data" width="300">
@@ -53,7 +63,7 @@ No campo de data de nascimento é possível notar há uma falha que faz com que 
   <img src="Images/Pasted image 20250719101400.png" alt="Data2" width="300">
 </p>
 
-Algo que diferente do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
+Algo que difere do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
 Imagem de referência do protótipo:
 
 <p align="center">

@@ -9,6 +9,18 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     // Alterar o botão de inativo para ativo
     cy.get('button.ant-switch').click()
 
+    //Esse comando vai verificar se o status do botão está ativo
+    cy.get('button.ant-switch').then(($status) => {
+        if ($status.text() === 'Ativo') {
+        cy.log('O status está ativo');
+        } else {
+        cy.log('O status não está ativo');
+      }
+    });
+
+    //Alterar botão de radio para o sexo masculino
+    cy.get('button.ant-radio ant-radio-checked').click();
+
     // Preencher o campo de nome
     cy.get('input[name="name"]').type('Paulo Henrique');
 
