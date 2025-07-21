@@ -63,4 +63,9 @@ No campo de data de nascimento é possível notar há uma falha que faz com que 
 
 ![Data](<Pasted image 20250719102124.png>)
 
-![Data](<Pasted image 20250719101400.png>)
+![Data2](<Pasted image 20250719101400.png>)
+
+Algo que diferente do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
+Imagem de referência do protótipo:
+
+![Data3](<Pasted image 20250719101549.png>)
