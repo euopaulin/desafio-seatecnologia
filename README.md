@@ -1,8 +1,8 @@
 # 👾 Desafio Técnico SEA Tecnologia
 
-Essa documentação tem como objetivo relatar todo o processo feito no teste de software da SEA Tecnologia. Irei explicar as ferramentas usadas, métodos utilizados para encontrar as falhas e dizer possíveis soluções para essas falhas.
+Essa documentação tem como objetivo relatar todo o processo feito no teste de software da SEA Tecnologia. Irei explorar e explicar as ferramentas usadas, métodos utilizados para encontrar os bugs e reporta-los, testando sua funcionalidades, usababilidade e compatibilidade entre diferentes dispositivos e navegadores, além de sugerir possíveis soluções para essas falhas.
 
-Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o prototipo. A ideia é comparar os dois e analisar se a página de teste segue o mesmo desing e funcionalidades do prototipo.
+Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o prototipo. A ideia é comparar os dois e analisar se o site de teste está em conformidade com o site prototipo.
 
 ---
 
@@ -40,13 +40,15 @@ Separei os dois tipos de testes feitos em dois arquivos md aqui no repositorio, 
 
 ## [🎨Testes de desing](TestesDesing.md)
 
-Passo a passo para iniciar o Cypress para testar a funcionalidade do site:
+---
 
-1 - É necessario ter o VScode e Node instalado na máquina.
+**Passo a passo para iniciar o Cypress para testar a funcionalidade do site:**
 
-2 - Utilizei a versão v22.14.0 LTS do Node.js para rodar o Cypress.
+**1** - É necessario ter o VScode e Node instalado na máquina.
 
-3 - Após ter feito a instalação do dois e abrir o repositorio, faça o seguinte:
+**2** - Utilizei a versão v22.14.0 LTS do Node.js para rodar o Cypress.
+
+**3** - Após ter feito a instalação do dois e abrir o repositorio, faça o seguinte:
 
 Abra o terminal e digite:
 
@@ -66,4 +68,4 @@ Após isso digite o seguinte comando para rodar o Cypress:
 npx cypress open
 ```
 
-Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro, em: [Código de teste](teste-SEA.cy.js)
+Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro, em: [Código de teste](cypress/e2e/teste-SEA.cy.js)
