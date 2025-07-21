@@ -1,27 +1,27 @@
-describe('Teste de cadastro de novo usuário', () => {
-  it('Deve cadastrar um novo usuário', () => {
-    // Acessa a página de cadastro de novo usuário
+describe('Teste da página de cadastro de novos funcionarios', () => {
+  it('Cadastrar um novo funcionario', () => {
+    // Para acessar o site:
     cy.visit('https://analista-teste.seatecnologia.com.br/')
 
-    //localiza o botão e clica nele
+    // localizar o botão e clicar nele
     cy.get('button.c-kUQtTK').click();
 
-    //altera o botão de inativo para ativo
+    // Alterar o botão de inativo para ativo
     cy.get('button.ant-switch').click()
 
-    //Preenche o campo de nome
+    // Preencher o campo de nome
     cy.get('input[name="name"]').type('Paulo Henrique');
 
-    //Preenche o campo do CPF
-    cy.get('input[name="cpf"]').type('cpfnumeros');
+    // Preencher o campo do CPF
+    cy.get('input[name="cpf"]').type('12345678901');
 
-    // Verifica se o campo CPF foi preenchido corretamente
-     cy.get('input[name="cpf"]').should('have.value', 'cpfnumeros');
+    // Verificar se o campo CPF foi preenchido corretamente
+     cy.get('input[name="cpf"]').should('have.value', '12345678901');
 
-     //Verifica o campo do RG
+     // Verificar o campo do RG
      cy.get('input[name="rg"]').type('123456789121212131313142312412312312313431513513123');
 
-     //Verifica o campo de Adicionar EPI
+     // Verificar o campo de Adicionar EPI
      cy.get('span.addEPI').click();
     });
   });

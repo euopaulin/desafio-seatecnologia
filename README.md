@@ -28,9 +28,9 @@ Começarei apresentando os testes de funcionalidades.
 
 Para a realização dos testes feitos nas funcionalidades da página, foram utilizado dois metodos, sendo eles: 
 
-**1** - Testes manuais, simulando um cenário real onde um usuário administrador do sistema iria preencher os campos necessários e cadastrar o novo funcionário. Esse foi o método mais utilizado nos testes.
+🔴 **1** - Testes manuais, simulando um cenário real onde um usuário administrador do sistema iria preencher os campos necessários e cadastrar o novo funcionário. Esse foi o método mais utilizado nos testes.
 
-**2** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
+🔴 **2** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
 
 ---
 
@@ -55,17 +55,43 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
 
 Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém na página o campo do RG permite digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está especificado o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
 
-![Letras RG](<Images\rg letras.png>)
-
 ![RG](<Images\Pasted image 20250719100229.png>)
 
 No campo de data de nascimento é possível notar há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
 
-![Data](<Pasted image 20250719102124.png>)
+![Data](<Images\Pasted image 20250719102124.png>)
 
-![Data2](<Pasted image 20250719101400.png>)
+![Data2](<Images\Pasted image 20250719101400.png>)
 
 Algo que diferente do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
 Imagem de referência do protótipo:
 
-![Data3](<Pasted image 20250719101549.png>)
+![Data3](<Images\Pasted image 20250719101549.png>)
+
+O campo de alteração de sexo parece funcionar bem, não indentifiquei nenhum problema.
+
+![sex](<Images\Pasted image 20250719100650.png>)
+
+No campo onde selecionamos as EPIs em que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA, o campo não possui limite de caracteres, semelhante a falha encontrada nos campos de RG e CPF, anteriormente.
+
+![EPI](<Images\Pasted image 20250719101034.png>)
+
+Também notei que não é possivel adionar a EPI. O botão de "Adicionar EPI" na versão de testes não funciona e também possui o Layout diferente do mesmo botão no protótipo.
+
+Abaixo está uma comparação entre os dois:
+
+<h3>Protótipo:</h3>
+
+![Protótipo](<Images\Pasted image 20250719103517.png>)
+
+<h3>Teste:</h3>
+
+![Teste](<Images\Pasted image 20250719104624.png>)
+
+Na página inicial na parte onde é listada os funcionários, não consigo excluir os que criei, simplesmente o botão onde aparece a funcionalidade de excluir ou modificar não aparece.
+
+![Exluir](<Images\Captura de tela 2025-07-19 104811.png>)
+
+Era para aparecer algo assim, como no protótipo:
+
+![ProtExcluir](<Images\Captura de tela 2025-07-19 105029.png>)
