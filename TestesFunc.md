@@ -1,4 +1,10 @@
+## Testes de funcionalidades
+
+A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
+
 De incio comecei testando o botão "Adicionar novo funcionario" e ocorreu tudo certo, esse botão funciona de acordo como o do prototipo.
+
+---
 
 ![Adicionar novo funcionario](Images/image-1.png)
 
@@ -44,11 +50,11 @@ Também notei que não é possivel adionar a EPI. O botão de "Adicionar EPI" na
 
 Abaixo está uma comparação entre os dois:
 
-<h3>Protótipo:</h3>
+## Protótipo: ##
 
 ![Protótipo](<Images/Pasted image 20250719103517.png>)
 
-<h3>Teste:</h3>
+## Teste: ##
 
 ![Teste](<Images/Pasted image 20250719104624.png>)
 
@@ -59,3 +65,43 @@ Na página inicial na parte onde é listada os funcionários, não consigo exclu
 Era para aparecer algo assim, como no protótipo:
 
 ![ProtExcluir](<Images/Captura de tela 2025-07-19 105029.png>)
+
+Ao inspesionar o site com o ChromeDevTools e verificar a aba de "Conexão" é possivel notar que há uma fonte que não foi carregada, é fornecido o erro "400 Bad Request".
+
+![400 erro](<Images/Pasted image 20250721080904.png>)
+
+Esse erro da falha de carregamento da fonte acontece devido a um erro de sintaxe na url da fonte. faltou o "&" antes do "display=swap"
+
+Ao copiar e corrigir o link da fonte pesquisar é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
+
+![erro font](<Images/Pasted image 20250721081348.png>)
+
+Esse é um erro que pode ser facilmente corrigido no código onde o link da fonte está vinculada.
+
+Há um erro em relação ao filtro de funcionários ativos. Quando filtrado apenas por funcionários ativos é possível notar que mesmo o funcionário "Sea Teste" que está como "Ativid 2" acaba sumindo quando ativado o filtro, algo que não era para acontecer.
+
+Antes de ativar o filtro:
+
+![Before Filter](<Images/Pasted image 20250721081923.png>)
+
+Após ativar o filtro para apenas funcionários ativos:
+
+![after Filter](<Images/Pasted image 20250721082126.png>)
+
+É possível notar que o funcionário "Sea Teste" sumiu.
+
+O campo de adicionar documento parece estar funcionando bem, consegui anexar um documento sem problemas.
+
+![Docs](<Images/Pasted image 20250721082738.png>)
+
+O menu do quanto esquerdo não está funcionando, quando seleciono alguma opção que não seja a que já estamos, nada acontece.
+
+![Left Menu](<Images/Pasted image 20250721082908.png>)
+
+E por fim, o ultimo erro que percebi foi que ao marca como etapa concluída e clicar em próximo, nada acontece. No protótipo quando fazemos esse procedimento, é nos enviado para outra etapa.
+
+![Prox](<Images/Pasted image 20250721083144.png>)
+
+---
+
+Os testes realizados, tantos os automatizados e os manuais de forma encontraram os erros descritos acima. Ao meu ver o site possui muitas desconformidades em relação ao protótipo, o que inviabilizaria o uso em um cenário real.
