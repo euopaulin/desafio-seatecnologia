@@ -43,11 +43,11 @@ Separei os três tipos de testes feitos em três arquivos .md aqui no repositór
 
 **Passo a passo para iniciar o Cypress para testar a funcionalidade do site:**
 
-**1** - É necessário ter o VSCode e o Node instalados na máquina.
+- É necessário ter o VSCode e o Node instalados na máquina.
 
-**2** - Utilizei a versão v22.14.0 LTS do Node.js para rodar o Cypress.
+- Utilizei a versão v22.14.0 LTS do Node.js para rodar o Cypress.
 
-**3** - Após ter feito a instalação dos dois e abrir o repositório, faça o seguinte:
+- Após ter feito a instalação dos dois e abrir o repositório, faça o seguinte:
 
 Abra o terminal e digite para criar o ambiente:
 
