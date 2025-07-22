@@ -234,4 +234,10 @@ Nos três navegadores a usabilidade é a mesma e os mesmos problemas persistem.
 
 ---
 
-Os testes realizados, tantos os automatizados e os manuais de forma encontraram os erros descritos acima. Ao meu ver o site possui muitas desconformidades em relação ao protótipo, o que inviabilizaria o uso em um cenário real.
+## ✅ Conclusão dos testes feitos:
+
+Com os testes realizados, tanto os automatizados quanto os manuais, foi possível encontrar vários erros no site. Erros esses que comprometem a usabilidade, a experiência do usuário e até mesmo a segurança. Um usuário teria muita dificuldade para cadastrar um novo funcionário devido aos diversos bugs encontrados.
+
+Minha sugestão é que a equipe de back-end faça as correções nos códigos dos campos de inserção de dados e que, além disso, sejam criados novos campos de inserção de dados, como: número de telefone do funcionário ou e-mail para contato.
+
+Sugiro também que deva ser feita uma modificação o mais breve possível, para que o site seja responsivo para aparelhos móveis, pois, com o que existe hoje, é impossível de usar em dispositivos móveis.

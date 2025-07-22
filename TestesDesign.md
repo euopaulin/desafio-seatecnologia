@@ -81,3 +81,5 @@ UUma falha de texto bastante perceptível presente no site é na parte de 'Ativi
 Após realizados os testes, ficou claro que o site possui vários erros de front-end no que diz respeito à harmonia dos elementos gráficos, sendo facilmente corrigidos com alteração do código. Acredito que todos esses erros não façam com que o site se torne inutilizável. Um usuário conseguirá se orientar nele, porém não terá uma experiência muito satisfatória.
 
 Uma sugestão minha é que fosse desenvolvido um modo de alternância entre o modo claro e escuro para o site, pois assim o usuário poderia se adaptar melhor de acordo com sua preferência.
+
+Sugiro também que talvez seria mais interessante se o menu lateral esquerdo fosse mais intuitivo, não somente com os botões de cada aba, mas também com a indicação do nome de cada respectivo botão, para que o usuário saiba de fato para onde será levado caso clique ali
