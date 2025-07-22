@@ -33,7 +33,11 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     // Verificar o campo do RG
     cy.get('input[name="rg"]').type('123456789121212131313142312412312312313431513513123');
   
+    //Preencher o campo de data de nascimento
+    cy.get('input[name="birthDay"]').type('14/08/2000');
     // Verificar o campo de Adicionar EPI
     cy.get('span.addEPI').click();
+
+
     });
   });

@@ -11,6 +11,17 @@ Quando clico no botão, ocorre tudo certo, o botão funciona de acordo como o do
   <img src="Images/image-1.png" alt="Adicionar novo funcionario" width="800"/>
 </p>
 
+Para chegar nesse botão de forma automatizada utilizei o seguinte código no Cypress:
+
+```bash
+ cy.get('button.c-kUQtTK').click();
+```
+*Utilizei o ChromeDevTools para achar o nome da propriedade do botão "Adicionar Funcionário" que é c-kUQtTK, então fiz a referência no código para que assim quando rodasse ele fizesse a procura no site desse botão e assim que encontrasse fizesse a ação de clicar.*
+
+---
+
+## 📝 Campo de mome e CPF
+
 Após isso a página nos redireciona para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Para testar os campos foram utilizado tanto o teste manual, quanto o automatizado com o uso de Cypress.
 
 Foi testado o campo do CPF e ao digitar mais do que 11 dígitos ele fornece um erro, então o campo do CPF está funcionando bem em questão de número máximo de dígitos. Também testei a limitação de dígitos mínimos e ao digitar menos que 11 é mostrado uma mensagem para que o usuário se atente ao número de caracteres mínimos.
@@ -21,11 +32,17 @@ Porém como pode ver na imagem abaixo, eu realizei o teste digitando caracteres 
   <img src="Images/Pasted image 20250719102034.png" alt="Mensagem caracteres CPF" width="700"/>
 </p>
 
-A imagem abaixo mostrar um erro no Cypress, pois no código coloquei para que ele digitasse um número maior do que o permitido para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
+A imagem abaixo mostra um erro no Cypress, pois no código coloquei para que ele digitasse um número maior do que o permitido para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
 
 <p align="center">
   <img src="Images/Captura de tela 2025-07-19 093615.png" alt="Erro CPF" width="800"/>
 </p>
+
+Código usado para realizar essa automação:
+
+```bash
+ cy.get('input[name="cpf"]').should('have.value', '12345678901');
+```
 
 Porém no cadastro de CPF é possivel notar uma falha. Sabemos que CPF são somente números e no campo do CPF é possivel digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JS da página que provavelmente não está habilitado para que o campo do CPF seja permitido apenas números.
 Esse mesmo erro também acontece com o campo do RG.
@@ -36,11 +53,24 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
   <img src="Images/cpf letras.png" alt="Letras CPF" width="800"/>
 </p>
 
+Para realizar esse teste bastou eu alterar o código anterior para digitar o campo de CPF com número, porém colocando para que digitasse "cpfnumeros".
+
+```bash
+  cy.get('input[name="cpf"]').type('12345678901')
+```
+
 Falha como essa compromete muito o funcionamento do site e a função de cadastrar novos funcionarios, pois abre brecha para que usuário sejam cadastrados com CPF errados, sendo assim uma falha critica para o site.
 
 ---
 
+## 📝 Campo de RG
+
 Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém no campo do RG é permitido digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está configurado especificando o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
+
+Código de automação utilizado:
+```bash
+ cy.get('input[name="rg"]').type('123456789121212131313142312');
+```
 
 Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o cadastro de RG do funcionario vuneravel e muito sucetivo a erros.
 
@@ -49,6 +79,8 @@ Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o
 </p>
 
 ---
+
+## 📝 Campo de data de nascimento
 
 No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
 
@@ -178,6 +210,11 @@ Realizei abrir o site no celular e a visualização dele mobile é completamente
 </p>
 
 Essa é uma falha critica para o bom funcionamento do site, pois assim impossibilidade o usuário de utilizar a plataforma já que não tem usabilidade nenhuma.
+
+---
+
+Também foi realizado o teste em diversos navegadores como o Chrome, Firefox, Edege e Opera.
+Nos três navegadores a usabilidade é a mesma e os mesmos problemas persistem.
 
 ---
 
