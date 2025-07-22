@@ -1,6 +1,6 @@
-## Testes no UI (desing) do site
+## 🎨 Testes no UI (desing) do site
 
-Nessa documentação irei relatar todas as observações e falhas que encontrei na observação do site de testes. Bem como imagens desalinhadas, fontes incorretas e botões com padrões de cores diferentes do protótipo.
+Nessa documentação irei relatar todas as observações e falhas que encontrei na observação dos componentes gráficos do site de testes em comparação com o protótipo. Foi analisado elementos como imagens desalinhadas, fontes incorretas e botões com padrões de cores diferentes do protótipo.
 
 ## Testes página inicial
 

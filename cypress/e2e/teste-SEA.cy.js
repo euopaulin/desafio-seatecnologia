@@ -6,18 +6,6 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     // localizar o botão e clicar nele
     cy.get('button.c-kUQtTK').click();
 
-    // Alterar o botão de inativo para ativo
-    cy.get('button.ant-switch').click()
-
-    //Esse comando vai verificar se o status do botão está ativo
-    cy.get('button.ant-switch').then(($status) => {
-        if ($status.text() == 'ativo') {
-        cy.log('O status está ativo');
-        } else {
-        cy.log('O status não está ativo');
-      }
-    });
-
     //Alterar botão de radio para o sexo masculino
     cy.get('input[value="feminino"]').click();
 
@@ -35,6 +23,23 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
   
     //Preencher o campo de data de nascimento
     cy.get('input[name="birthDay"]').type('14/08/2000');
+
+    // Alterar o botão de inativo para ativo
+    cy.get('button.ant-switch').click()   
+    
+    //Esse comando vai verificar se o status do botão está ativo
+    cy.get('button.ant-switch').then(($status) => {
+        if ($status.text() === 'ativo') {
+        cy.log('O status está ativo');
+        } else {
+        cy.log('O status não está ativo');
+      }
+    });
+
+    cy.get('button.ant-select-select-selector').click();
+
+    cy.get('span.Cargo 02').click();
+
     // Verificar o campo de Adicionar EPI
     cy.get('span.addEPI').click();
 

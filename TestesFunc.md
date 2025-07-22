@@ -43,6 +43,7 @@ Código usado para realizar essa automação:
 ```bash
  cy.get('input[name="cpf"]').should('have.value', '12345678901');
 ```
+Esse código além de preencher o campo, também valida se é o valor correto.
 
 Porém no cadastro de CPF é possivel notar uma falha. Sabemos que CPF são somente números e no campo do CPF é possivel digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JS da página que provavelmente não está habilitado para que o campo do CPF seja permitido apenas números.
 Esse mesmo erro também acontece com o campo do RG.
@@ -84,7 +85,7 @@ Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o
 
 No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
 
-Mais uma falha critica no sistema de cadastro do site, que faz com qe torce o funcionamento vuneravel.
+Mais uma falha critica no sistema de cadastro do site, que faz com que torce o funcionamento vuneravel.
 
 
 <p align="center">
@@ -95,6 +96,11 @@ Mais uma falha critica no sistema de cadastro do site, que faz com qe torce o fu
   <img src="Images/Pasted image 20250719101400.png" alt="Data2" width="300">
 </p>
 
+Código para automatização do campo de data de nascimento:
+```bash
+  cy.get('input[name="birthDay"]').type('14/08/2000');
+```
+
 Algo que difere do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
 Imagem de referência do protótipo:
 
@@ -104,11 +110,18 @@ Imagem de referência do protótipo:
 
 ---
 
+## 📝 Campo de escolhe de sexo
+
 O campo de alteração de sexo parece funcionar bem, não indentifiquei nenhum problema.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100650.png" alt="Sexo" width="350">
 </p>
+
+Código de automação para selecionar o botão de sexo masculino:
+```bash
+  cy.get('input[value="feminino"]').click();
+```
 
 ---
 
