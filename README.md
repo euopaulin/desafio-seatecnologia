@@ -35,7 +35,7 @@ Para a realização dos testes feitos nas funcionalidades da página, foram util
 
 ---
 
-Separei os dois tipos de testes feitos em dois arquivos md aqui no repositorio, covê pode conferir clicando nos links abaixo:
+Separei os três tipos de testes feitos em três arquivos md aqui no repositorio, você pode conferir clicando nos links abaixo:
 
 ## [🛠️Testes de funcionalidades](TestesFunc.md)
 
@@ -104,3 +104,8 @@ O -relatorio e -format criam um relatorio da varredura feita.
 ---
 
 **Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro, em: [Código de teste](cypress/e2e/teste-SEA.cy.js)**
+
+---
+
+## Conclusão geral dos testes feitos
+

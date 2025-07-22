@@ -2,7 +2,7 @@
 
 A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
 
-## 👷 Testando cadastrar novo funcionario:
+## 👷 Testando cadastrar novo funcionario: ##
 
 De incio comecei testando o botão "Adicionar novo funcionario" que tem como objetivo cadastrar novos funcionarios com seus dados pessoais e de acordo com o EPI que ele utiliza em sua função. 
 Quando clico no botão, ocorre tudo certo, o botão funciona de acordo como o do prototipo.
@@ -20,7 +20,7 @@ Para chegar nesse botão de forma automatizada utilizei o seguinte código no Cy
 
 ---
 
-## 📝 Campo de mome e CPF
+## 📝 Campo de mome e CPF ##
 
 Após isso a página nos redireciona para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Para testar os campos foram utilizado tanto o teste manual, quanto o automatizado com o uso de Cypress.
 
@@ -64,7 +64,7 @@ Falha como essa compromete muito o funcionamento do site e a função de cadastr
 
 ---
 
-## 📝 Campo de RG
+## 📝 Campo de RG ##
 
 Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém no campo do RG é permitido digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está configurado especificando o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
 
@@ -81,7 +81,7 @@ Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o
 
 ---
 
-## 📝 Campo de data de nascimento
+## 📝 Campo de data de nascimento ##
 
 No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
 
@@ -110,7 +110,7 @@ Imagem de referência do protótipo:
 
 ---
 
-## 📝 Campo de escolhe de sexo
+## 📝 Campo de escolher o sexo ##
 
 O campo de alteração de sexo parece funcionar bem, não indentifiquei nenhum problema.
 
@@ -131,7 +131,7 @@ No campo onde selecionamos as EPIs em que o trabalhador usará nas atividades, �
   <img src="Images/Pasted image 20250719101034.png" alt="EPI" width="600">
 </p>
 
-Também notei que não é possivel adionar a EPI 🔨. O botão de "Adicionar EPI" na versão de testes não funciona e também possui o Layout diferente do mesmo botão no protótipo.
+Também notei que não é possivel adionar a EPI. O botão de "Adicionar EPI" na versão de testes não funciona e também possui o Layout diferente do mesmo botão no protótipo.
 
 Abaixo está uma comparação entre os dois:
 
@@ -141,13 +141,15 @@ Abaixo está uma comparação entre os dois:
   <img src="Images/Pasted image 20250719103517.png" alt="Protótipo" width="800">
 </p>
 
-## 🧪Teste: ##
+<h2> 🧪Teste: </h2>
 
 <p align="center">
   <img src="Images/Pasted image 20250719104624.png" alt="Teste" width="800">
 </p>
 
 ---
+
+## Página Inicial ##
 
 Na página inicial na parte onde é listada os funcionários, não consigo excluir os que criei, simplesmente o botão onde aparece a funcionalidade de excluir ou modificar não aparece.
 
@@ -161,7 +163,7 @@ Era para aparecer algo assim, como no protótipo:
   <img src="Images/Captura de tela 2025-07-19 105029.png" alt="Excluir" width="570">
 </p>
 
-Ao inspesionar o site com o ChromeDevTools e verificar a aba de "Conexão" é possivel notar que há uma fonte que não foi carregada, é fornecido o erro "400 Bad Request".
+Ao inspesionar o site com o ChromeDevTools e verificar a aba de "Conexão" é possivel notar que há uma fonte que não foi carregada. É fornecido o erro "400 Bad Request".
 
 <p align="center">
   <img src="Images/Pasted image 20250721080904.png" alt="Erro" width="600">
@@ -169,13 +171,15 @@ Ao inspesionar o site com o ChromeDevTools e verificar a aba de "Conexão" é po
 
 Esse erro da falha de carregamento da fonte acontece devido a um erro de sintaxe na url da fonte. faltou o "&" antes do "display=swap"
 
-Ao copiar e corrigir o link da fonte pesquisar é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
+Ao copiar e corrigir o link da fonte e pesquisar é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
 
 <p align="center">
   <img src="Images/Pasted image 20250721081348.png" alt="Fonte" width="600">
 </p>
 
-Esse é um erro que pode ser facilmente corrigido no código onde o link da fonte está vinculada.
+Esse é um erro que pode ser facilmente corrigido no código Front-End na parte onde está linkado a busca da fonte vinculada.
+
+## Fitro de funcionários ativos ##
 
 Há um erro em relação ao filtro de funcionários ativos. Quando filtrado apenas por funcionários ativos é possível notar que mesmo o funcionário "Sea Teste" que está como "Ativid 2" acaba sumindo quando ativado o filtro, algo que não era para acontecer.
 
@@ -213,9 +217,9 @@ E por fim, o ultimo erro que percebi foi que ao marca como etapa concluída e cl
 
 ---
 
-## Teste em diferentes navegadores
+## Teste em diferentes navegadores e mobile ##
 
-Realizei abrir o site no celular e a visualização dele mobile é completamente confusa e fora do padrão do protótipo. A visualização mobile chega a ser impossivel de navegar pelo site, se tornando inoperante.
+Realizei abrir o site no celular android e a visualização dele em mobile é completamente confusa e fora do padrão do protótipo. A visualização mobile chega a ser impossivel de navegar pelo site, se tornando inoperante.
 
 <p align="center">
   <img src="Images/Printmobile1.jpg" alt="Mobile" width="400">
