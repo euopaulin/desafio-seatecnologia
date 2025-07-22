@@ -168,4 +168,17 @@ E por fim, o ultimo erro que percebi foi que ao marca como etapa concluída e cl
 
 ---
 
+## Teste em diferentes navegadores
+
+Realizei abrir o site no celular e a visualização dele mobile é completamente confusa e fora do padrão do protótipo. A visualização mobile chega a ser impossivel de navegar pelo site, se tornando inoperante.
+
+<p align="center">
+  <img src="Images/Printmobile1.jpg" alt="Mobile" width="400">
+  <img src="Images/Printmobile2.jpg" alt="Mobile" width="400">
+</p>
+
+Essa é uma falha critica para o bom funcionamento do site, pois assim impossibilidade o usuário de utilizar a plataforma já que não tem usabilidade nenhuma.
+
+---
+
 Os testes realizados, tantos os automatizados e os manuais de forma encontraram os erros descritos acima. Ao meu ver o site possui muitas desconformidades em relação ao protótipo, o que inviabilizaria o uso em um cenário real.
