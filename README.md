@@ -4,8 +4,6 @@ Essa documentação tem como objetivo relatar todo o processo feito no teste de 
 
 Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o protótipo. A ideia é comparar os dois e analisar se o site de teste está em conformidade com o site protótipo.
 
----
-
 ## ⚙️ Ferramentas utilizadas:
 
 | Ferramenta       | Função                            |
@@ -104,8 +102,3 @@ O -relatorio e -format criam um relatorio da varredura feita.
 ---
 
 **Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro, em: [Código de teste](cypress/e2e/teste-SEA.cy.js)**
-
----
-
-## Conclusão geral dos testes feitos
-

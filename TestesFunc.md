@@ -1,52 +1,50 @@
 # ⚙️ Testes de funcionalidades 
 
-A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
+A página fornecida para o teste trata-se de um site para gerenciamento e cadastro de novos funcionários.
 
 ## 👷 Teste de cadastro de novo funcionario: ##
 
-De incio comecei testando o botão "Adicionar novo funcionario" que tem como objetivo cadastrar novos funcionarios com seus dados pessoais e de acordo com o EPI que ele utiliza em sua função. 
-Quando clico no botão, ocorre tudo certo, o botão funciona de acordo como o do prototipo.
+De início, comecei testando o botão 'Adicionar novo funcionário', que tem como objetivo cadastrar novos funcionários com seus dados pessoais e de acordo com o EPI que ele utiliza em sua função. Quando clico no botão, ocorre tudo certo e o botão funciona de acordo com o do protótipo.
 
 <p align="center">
   <img src="Images/image-1.png" alt="Adicionar novo funcionario" width="800"/>
 </p>
 
-Para chegar nesse botão de forma automatizada utilizei o seguinte código no Cypress:
+Para chegar nesse botão de forma automatizada, utilizei o seguinte código no Cypress:
 
 ```bash
  cy.get('button.c-kUQtTK').click();
 ```
-*Usei o ChromeDevTools para identificar a classe do botão "Adicionar Funcionário" que é "c-kUQtTK", então fiz a referência no código para que assim quando rodasse, fizesse a procura no site desse botão e assim que encontrasse fizesse a ação de clicar. O mesmo foi feito com os outros códigos de automação presente nessa documentação.*
+*Usei o Chrome DevTools para identificar a classe do botão 'Adicionar Funcionário', que é 'c-kUQtTK'. Em seguida, fiz a referência no código para que, ao rodá-lo, o Cypress procurasse esse botão no site e, assim que o encontrasse, realizasse a ação de clicar. O mesmo foi feito com os outros códigos de automação presentes nesta documentação.*
 
 ---
 
 ## 📝 Campo de mome e CPF ##
 
-Após isso a página nos redireciona para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Para testar os campos foram utilizado tanto o teste manual, quanto o automatizado com o uso de Cypress.
+Após isso, a página nos redireciona para outra tela onde devemos preencher os campos necessários para cadastrar um novo funcionário. Para testar os campos, foram utilizados tanto o teste manual quanto o automatizado com o uso do Cypress.
 
-Foi testado o campo do CPF e ao digitar mais do que 11 dígitos ele fornece um erro, então o campo do CPF está funcionando bem em questão de número máximo de dígitos. Também testei a limitação de dígitos mínimos e ao digitar menos que 11 é mostrado uma mensagem para que o usuário se atente ao número de caracteres mínimos.
+Foi testado o campo do CPF e, ao digitar mais do que 11 dígitos, ele fornece um erro. Então, o campo do CPF está funcionando bem em relação ao número máximo de dígitos. Também testei a limitação de dígitos mínimos e, ao digitar menos que 11, é exibida uma mensagem para que o usuário se atente ao número de caracteres mínimos.
 
-Porém como pode ver na imagem abaixo, eu realizei o teste digitando caracteres alfabeticos, algo que pode ser considerada uma falha para esse campo. Elaborarei isso mais para frente.
+Porém, como pode ser visto na imagem abaixo, eu realizei o teste digitando caracteres alfabéticos, algo que pode ser considerado uma falha para esse campo. Elaborarei isso mais à frente.
 
 <p align="center">
   <img src="Images/Pasted image 20250719102034.png" alt="Mensagem caracteres CPF" width="700"/>
 </p>
 
-Na imagem abaixo a automação falha ao verificar que o CPF digitado contém caracteres maiores que o número máximo de caracteres permitido, o que indica que o número maximo de caracteres está sendo aplicada corretamente.
+Na imagem abaixo, a automação falha ao verificar que o CPF digitado contém caracteres maiores do que o número máximo de caracteres permitido, o que indica que o número máximo de caracteres está sendo aplicado corretamente.
 
 <p align="center">
   <img src="Images/Captura de tela 2025-07-19 093615.png" alt="Erro CPF" width="800"/>
 </p>
 
-Código usado para realizar essa automação:
+Código utilizado para realizar essa automação:
 
 ```bash
  cy.get('input[name="cpf"]').should('have.value', '1234567890111');
 ```
-Esse código além de preencher o campo, também valida se é o valor correto.
+Esse código, além de preencher o campo, também valida se o valor é o correto.
 
-Porém no cadastro de CPF é possivel notar uma falha. Sabemos que CPF são somente números e no campo do CPF é possivel digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JS da página que provavelmente não está habilitado para que o campo do CPF seja permitido apenas números.
-Esse mesmo erro também acontece com o campo do RG.
+Porém, no cadastro de CPF, é possível notar uma falha. Sabemos que o CPF deve conter apenas números, mas no campo do CPF é possível digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JavaScript da página, que provavelmente não está habilitado para restringir o campo do CPF a apenas números. Esse mesmo erro também ocorre no campo do RG.
 
 Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
 
@@ -54,26 +52,26 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
   <img src="Images/cpf letras.png" alt="Letras CPF" width="800"/>
 </p>
 
-Para realizar esse teste bastou eu alterar o código anterior para digitar o campo de CPF com número, porém colocando para que digitasse "cpfnumeros".
+Para realizar esse teste, bastou eu alterar o código anterior para digitar no campo de CPF com números, porém colocando para que digitasse 'cpfnumeros'
 
 ```bash
   cy.get('input[name="cpf"]').type('12345678901')
 ```
 
-Falha como essa compromete muito o funcionamento do site e a função de cadastrar novos funcionarios, pois abre brecha para que usuário sejam cadastrados com CPF errados, sendo assim uma falha critica para o site.
+Falha como essa compromete muito o funcionamento do site e a função de cadastrar novos funcionários, pois abre brecha para que usuários sejam cadastrados com CPFs errados, sendo, assim, uma falha crítica para o site.
 
 ---
 
 ## 📝 Campo de RG ##
 
-Agora no campo do RG é possível encontrar um erro de limite de caracteres. Normalmente um RG tem entre 7 e 9 dígitos, porém no campo do RG é permitido digitar um número infinito de dígitos. Dessa forma, é bem provavel que o código JS também não está configurado especificando o limite de caracteres para esse campo. Se esse for o caso, é bem provavel que o comando **"maxlength="** resolva o problema do limite de caracteres.
+Agora, no campo do RG, é possível encontrar um erro de limite de caracteres. Normalmente, um RG tem entre 7 e 9 dígitos, porém no campo do RG é permitido digitar um número infinito de dígitos. Dessa forma, é bem provável que o código JS também não esteja configurado para especificar o limite de caracteres para esse campo. Se esse for o caso, é bem provável que o comando **'maxlength='** resolva o problema do limite de caracteres.
 
 Código de automação utilizado:
 ```bash
  cy.get('input[name="rg"]').type('123456789121212131313142312');
 ```
 
-Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o cadastro de RG do funcionario vuneravel e muito sucetivo a erros.
+Essa também é uma falha crítica para o site e seu objetivo, pois isso torna o cadastro de RG do funcionário vulnerável e muito suscetível a erros.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100229.png" alt="Letras RG" width="470"/>
@@ -83,9 +81,9 @@ Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o
 
 ## 📝 Campo de data de nascimento ##
 
-No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs devem limitar a data no back-end para até um certo ano que seja o limite mínimo de idade para os cargos.
+No campo de data de nascimento, é possível notar que há uma falha que permite ao usuário escolher uma data de nascimento no futuro em relação à data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027, sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema, os desenvolvedores devem limitar a data no back-end para até um certo ano que seja o limite mínimo de idade para os cargos.
 
-Mais uma falha critica no sistema de cadastro do site, que faz com que torce o funcionamento vuneravel.
+Mais uma falha crítica no sistema de cadastro do site, que torna o funcionamento vulnerável.
 
 
 <p align="center">
@@ -96,12 +94,13 @@ Mais uma falha critica no sistema de cadastro do site, que faz com que torce o f
   <img src="Images/Pasted image 20250719101400.png" alt="Data2" width="300">
 </p>
 
-Código para automatização do campo de data de nascimento:
+Código para automação do campo de data de nascimento:
 ```bash
   cy.get('input[name="birthDay"]').type('14/08/2000');
 ```
 
-Algo que difere do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Já no de testes é possivel selecionar a data no calendário, não somente digitand. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
+Algo que difere do protótipo é que, no campo de data de nascimento, é possível notar que existe somente o campo onde será inserida a data, não sendo possível selecionar o calendário. Já no de testes, é possível selecionar a data no calendário, não apenas digitando. Talvez, nesse quesito, o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
+
 Imagem de referência do protótipo:
 
 <p align="center">
@@ -112,7 +111,7 @@ Imagem de referência do protótipo:
 
 ## 📝 Campo de escolher o sexo ##
 
-O campo de alteração de sexo parece funcionar bem, não indentifiquei nenhum problema.
+O campo de alteração de sexo parece funcionar bem; não identifiquei nenhum problema.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100650.png" alt="Sexo" width="350">
@@ -125,13 +124,13 @@ Código de automação para selecionar o botão de sexo masculino:
 
 ---
 
-No campo onde selecionamos as EPIs em que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA, o campo não possui limite de caracteres, semelhante a falha encontrada nos campos de RG e CPF, anteriormente.
+No campo onde selecionamos os EPIs que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA. O campo não possui limite de caracteres, semelhante à falha encontrada nos campos de RG e CPF, anteriormente.
 
 <p align="center">
   <img src="Images/Pasted image 20250719101034.png" alt="EPI" width="600">
 </p>
 
-Também notei que não é possivel adionar a EPI. O botão de "Adicionar EPI" na versão de testes não funciona e também possui o Layout diferente do mesmo botão no protótipo.
+Também notei que não é possível adicionar o EPI. O botão 'Adicionar EPI' na versão de testes não funciona e também possui um layout diferente do mesmo botão no protótipo.
 
 Abaixo está uma comparação entre os dois:
 
@@ -151,7 +150,7 @@ Abaixo está uma comparação entre os dois:
 
 ## Página Inicial ##
 
-Na página inicial na parte onde é listada os funcionários, não consigo excluir os que criei, simplesmente o botão onde aparece a funcionalidade de excluir ou modificar não aparece.
+Na página inicial, na parte onde são listados os funcionários, não consigo excluir os que criei. Simplesmente, o botão com a funcionalidade de excluir ou modificar não aparece.
 
 <p align="center">
   <img src="Images/Captura de tela 2025-07-19 104811.png" alt="Excluir" width="570">
@@ -163,15 +162,15 @@ Era para aparecer algo assim, como no protótipo:
   <img src="Images/Captura de tela 2025-07-19 105029.png" alt="Excluir" width="570">
 </p>
 
-Ao inspesionar o site com o ChromeDevTools e verificar a aba de "Conexão" é possivel notar que há uma fonte que não foi carregada. É fornecido o erro "400 Bad Request".
+Ao inspecionar o site com o Chrome DevTools e verificar a aba de 'Conexão', é possível notar que há uma fonte que não foi carregada. É fornecido o erro '400 Bad Request'.
 
 <p align="center">
   <img src="Images/Pasted image 20250721080904.png" alt="Erro" width="600">
 </p>
 
-Esse erro da falha de carregamento da fonte acontece devido a um erro de sintaxe na url da fonte. faltou o "&" antes do "display=swap"
+Esse erro de falha no carregamento da fonte acontece devido a um erro de sintaxe na URL da fonte. Faltou o '&' antes de 'display=swap'.
 
-Ao copiar e corrigir o link da fonte e pesquisar é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
+Ao copiar e corrigir o link da fonte e pesquisar, é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
 
 <p align="center">
   <img src="Images/Pasted image 20250721081348.png" alt="Fonte" width="600">
