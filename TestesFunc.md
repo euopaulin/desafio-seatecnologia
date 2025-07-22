@@ -2,7 +2,7 @@
 
 A página fornecida para o teste se trata de um site para gerenciamento e cadastro de novos funcionarios.
 
-## 👷 Testando cadastrar novo funcionario: ##
+## 👷 Teste de cadastro de novo funcionario: ##
 
 De incio comecei testando o botão "Adicionar novo funcionario" que tem como objetivo cadastrar novos funcionarios com seus dados pessoais e de acordo com o EPI que ele utiliza em sua função. 
 Quando clico no botão, ocorre tudo certo, o botão funciona de acordo como o do prototipo.
@@ -16,7 +16,7 @@ Para chegar nesse botão de forma automatizada utilizei o seguinte código no Cy
 ```bash
  cy.get('button.c-kUQtTK').click();
 ```
-*Utilizei o ChromeDevTools para achar o nome da propriedade do botão "Adicionar Funcionário" que é c-kUQtTK, então fiz a referência no código para que assim quando rodasse ele fizesse a procura no site desse botão e assim que encontrasse fizesse a ação de clicar.*
+*Usei o ChromeDevTools para identificar a classe do botão "Adicionar Funcionário" que é "c-kUQtTK", então fiz a referência no código para que assim quando rodasse, fizesse a procura no site desse botão e assim que encontrasse fizesse a ação de clicar. O mesmo foi feito com os outros códigos de automação presente nessa documentação.*
 
 ---
 
@@ -32,7 +32,7 @@ Porém como pode ver na imagem abaixo, eu realizei o teste digitando caracteres 
   <img src="Images/Pasted image 20250719102034.png" alt="Mensagem caracteres CPF" width="700"/>
 </p>
 
-A imagem abaixo mostra um erro no Cypress, pois no código coloquei para que ele digitasse um número maior do que o permitido para o campo do CPF. Fiz isso para confirmar que o limite de caracteres no CPF está funcionando corretamente.
+Na imagem abaixo a automação falha ao verificar que o CPF digitado contém caracteres maiores que o número máximo de caracteres permitido, o que indica que o número maximo de caracteres está sendo aplicada corretamente.
 
 <p align="center">
   <img src="Images/Captura de tela 2025-07-19 093615.png" alt="Erro CPF" width="800"/>
@@ -41,7 +41,7 @@ A imagem abaixo mostra um erro no Cypress, pois no código coloquei para que ele
 Código usado para realizar essa automação:
 
 ```bash
- cy.get('input[name="cpf"]').should('have.value', '12345678901');
+ cy.get('input[name="cpf"]').should('have.value', '1234567890111');
 ```
 Esse código além de preencher o campo, também valida se é o valor correto.
 
@@ -83,7 +83,7 @@ Essa também é uma falha critica para o site e seu objetivo, pois isso tornar o
 
 ## 📝 Campo de data de nascimento ##
 
-No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs deve limitar a data para até um certo ano que seja o limite mínimo de idade para os cargos.
+No campo de data de nascimento é possível notar que há uma falha que faz com que o usuário possa escolher a data de nascimento no futuro da data atual. Por exemplo, é possível colocar a data de nascimento no dia 27/10/2027 sendo que estamos em 2025, algo que não faz sentido. Para resolver esse problema os Devs devem limitar a data no back-end para até um certo ano que seja o limite mínimo de idade para os cargos.
 
 Mais uma falha critica no sistema de cadastro do site, que faz com que torce o funcionamento vuneravel.
 
@@ -101,7 +101,7 @@ Código para automatização do campo de data de nascimento:
   cy.get('input[name="birthDay"]').type('14/08/2000');
 ```
 
-Algo que difere do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
+Algo que difere do protótipo é que no campo de data de nascimento é possível notar que existe somente o campo onde será inserido a data, não é possível selecionar o calendário. Já no de testes é possivel selecionar a data no calendário, não somente digitand. Talvez nesse quesito o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
 Imagem de referência do protótipo:
 
 <p align="center">
