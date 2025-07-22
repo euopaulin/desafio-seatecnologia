@@ -1,6 +1,6 @@
 # 👾 Desafio Técnico SEA Tecnologia
 
-Essa documentação tem como objetivo relatar todo o processo feito no teste de software da SEA Tecnologia. Irei explorar de forma exaustiva o software e apresentar as ferramentas usadas, métodos utilizados para encontrar os bugs e reportá-los, testando suas funcionalidades, usabilidade e compatibilidade entre diferentes dispositivos e navegadores, além de sugerir possíveis soluções para essas falhas.
+Esta documentação tem como objetivo relatar todo o processo realizado no teste de software da SEA Tecnologia. Irei explorar de forma exaustiva o software e apresentar as ferramentas usadas, métodos utilizados para encontrar os bugs e reportá-los, testando suas funcionalidades, usabilidade e compatibilidade entre diferentes dispositivos e navegadores, além de sugerir possíveis soluções para essas falhas.
 
 Foram realizados testes manuais e testes automatizados, comparando as duas páginas fornecidas para o teste, uma sendo a de testes e a outra o protótipo. A ideia é comparar os dois e analisar se o site de teste está em conformidade com o site protótipo.
 
@@ -21,19 +21,19 @@ Dividi os testes em três: **Testes de Funcionalidades**, **Testes de Desing**, 
 
 ---
 
-### Metodos adotados:
+### ⚙️ Metodos adotados:
 
 Para a realização dos testes feitos nas funcionalidades da página, foram utilizados três métodos, sendo eles:
 
 🔴 **1** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
 
-🔴 **2** - Testes manuais na analise de elementos graficos que estão em desconformidade com o prototipo, como fontes, textos, layouts, cores e imagens.
+🔴 **2** - Testes manuais na análise de elementos gráficos que estão em desconformidade com o protótipo, como fontes, textos, layouts, cores e imagens.
 
-🔴 **3** - Teste básico de segurança utilizando o Nikto via distro Linux Mint
+🔴 **3** - este básico de segurança utilizando o Nikto via distribuição Linux Mint.
 
 ---
 
-Separei os três tipos de testes feitos em três arquivos md aqui no repositorio, você pode conferir clicando nos links abaixo:
+Separei os três tipos de testes feitos em três arquivos .md aqui no repositório. Você pode conferir clicando nos links abaixo:
 
 ## [🛠️Testes de funcionalidades](TestesFunc.md)
 
@@ -43,15 +43,13 @@ Separei os três tipos de testes feitos em três arquivos md aqui no repositorio
 
 **Passo a passo para iniciar o Cypress para testar a funcionalidade do site:**
 
-**1** - É necessario ter o VScode e Node instalado na máquina.
+**1** - É necessário ter o VSCode e o Node instalados na máquina.
 
 **2** - Utilizei a versão v22.14.0 LTS do Node.js para rodar o Cypress.
 
-**3** - Após ter feito a instalação do dois e abrir o repositorio, faça o seguinte:
+**3** - Após ter feito a instalação dos dois e abrir o repositório, faça o seguinte:
 
-Abra o terminal e digite:
-
-Criará o ambiente:
+Abra o terminal e digite para criar o ambiente:
 
 ```bash
 npm init -y
@@ -61,7 +59,7 @@ npm init -y
 npm install cypress --save-dev
 ```
 
-Após isso digite o seguinte comando para rodar o Cypress:
+Após isso, digite o seguinte comando para rodar o Cypress:
 
 ```bash
 npx cypress open
@@ -71,15 +69,14 @@ npx cypress open
 
 **Passo a passo para verificar vunerabilidade do site via terminal Linux com o Nikto:**
 
-**1** - Para utilizar o Nikto é necessario um ambinete Linux ou pode rodar via Git.bash. Optei por rodar via terminal Linux, pois já tinha uma máquina com Linux Mint instalado.
-    Também é possivel rodar o Nikton no Windows via WLS.
+**1** - Para utilizar o Nikto, é necessário um ambiente Linux ou pode rodar via Git Bash. Optei por rodar via terminal Linux, pois já tinha uma máquina com Linux Mint instalado. Também é possível rodar o Nikto no Windows via WSL.
 
-**2** - No terminal de sua preferência digite o seguinte comando para instalar e   iniciar o Nikto:
+**2** - No terminal de sua preferência, digite o seguinte comando para instalar e iniciar o Nikto:
 
 ```bash
 sudo apt install nikto
 ```
-Após isso digite o comando para clonar o repositorio do Nikto:
+Após isso, digite o comando para clonar o repositório do Nikto:
 
 ```bash
 git clone https://github.com/nikto/nikto.git
@@ -97,8 +94,8 @@ E por fim:
 perl program/nikto.pl -h https://analista-teste.seatecnologia.com.br/ -o relatorio.html -Format html
 ```
 
-O -relatorio e -format criam um relatorio da varredura feita.
+O -relatorio e -format criam um relatório da varredura feita.
 
 ---
 
-**Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro, em: [Código de teste](cypress/e2e/teste-SEA.cy.js)**
+**Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro em: [Código de teste](cypress/e2e/teste-SEA.cy.js)**
