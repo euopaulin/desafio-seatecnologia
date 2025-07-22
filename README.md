@@ -21,15 +21,15 @@ Foram realizados testes manuais e testes automatizados, comparando as duas pági
 
 Dividi os testes em três: **Testes de Funcionalidades**, **Testes de Desing**, **Testes de Segurança**. Optei por dividir em três, para melhor compreensão das falhas encontradas.
 
-Começarei apresentando os testes de funcionalidades.
-
 ---
 
-### Falhas de funcionalidades encontradas:
+### Metodos adotados:
 
-Para a realização dos testes feitos nas funcionalidades da página, foram utilizados dois métodos, sendo eles:
+Para a realização dos testes feitos nas funcionalidades da página, foram utilizados três métodos, sendo eles:
 
-🔴 **2** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
+🔴 **1** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
+
+🔴 **2** - Testes manuais na analise de elementos graficos que estão em desconformidade com o prototipo, como fontes, textos, layouts, cores e imagens.
 
 🔴 **3** - Teste básico de segurança utilizando o Nikto via distro Linux Mint
 
@@ -39,7 +39,7 @@ Separei os três tipos de testes feitos em três arquivos md aqui no repositorio
 
 ## [🛠️Testes de funcionalidades](TestesFunc.md)
 
-## [🎨Testes de desing](TestesDesing.md)
+## [🎨Testes de design](TestesDesign.md)
 
 ## [🛡️Testes de segurança](TestesSeguranca.md)
 
