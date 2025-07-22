@@ -46,6 +46,8 @@ Esse código, além de preencher o campo, também valida se o valor é o correto
 
 Porém, no cadastro de CPF, é possível notar uma falha. Sabemos que o CPF deve conter apenas números, mas no campo do CPF é possível digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JavaScript da página, que provavelmente não está habilitado para restringir o campo do CPF a apenas números. Esse mesmo erro também ocorre no campo do RG.
 
+Uma solução que sugiro para essa falha é a equipe do front-end coloque um filtro para garantir que somente números possam ser digitados.
+
 Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
 
 <p align="center">
@@ -111,7 +113,7 @@ Imagem de referência do protótipo:
 
 ## 📝 Campo de escolher o sexo ##
 
-O campo de alteração de sexo parece funcionar bem; não identifiquei nenhum problema.
+O campo de alteração de sexo parece funcionar bem, não identifiquei nenhum problema.
 
 <p align="center">
   <img src="Images/Pasted image 20250719100650.png" alt="Sexo" width="350">
@@ -124,7 +126,7 @@ Código de automação para selecionar o botão de sexo masculino:
 
 ---
 
-No campo onde selecionamos os EPIs que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA. O campo não possui limite de caracteres, semelhante à falha encontrada nos campos de RG e CPF, anteriormente.
+No campo onde selecionamos os EPIs que o trabalhador usará nas atividades, é possível notar que há um erro quando é informado o CA. O campo não possui limite de caracteres, semelhante à falha encontrada nos campos de RG e CPF anteriormente.
 
 <p align="center">
   <img src="Images/Pasted image 20250719101034.png" alt="EPI" width="600">
@@ -162,13 +164,13 @@ Era para aparecer algo assim, como no protótipo:
   <img src="Images/Captura de tela 2025-07-19 105029.png" alt="Excluir" width="570">
 </p>
 
-Ao inspecionar o site com o Chrome DevTools e verificar a aba de 'Conexão', é possível notar que há uma fonte que não foi carregada. É fornecido o erro '400 Bad Request'.
+Ao inspecionar o site com o Chrome DevTools e verificar a aba de 'Conexão', é possível notar que há uma fonte que não foi carregada. O erro '400 Bad Request' é retornado.
 
 <p align="center">
   <img src="Images/Pasted image 20250721080904.png" alt="Erro" width="600">
 </p>
 
-Esse erro de falha no carregamento da fonte acontece devido a um erro de sintaxe na URL da fonte. Faltou o '&' antes de 'display=swap'.
+Esse erro de falha no carregamento da fonte acontece devido a um erro de sintaxe na URL da fonte. Faltou o '&' antes de *'display=swap'*.
 
 Ao copiar e corrigir o link da fonte e pesquisar, é possível notar que o link existe e a fonte está no ar, como a imagem abaixo mostra:
 
@@ -176,11 +178,11 @@ Ao copiar e corrigir o link da fonte e pesquisar, é possível notar que o link 
   <img src="Images/Pasted image 20250721081348.png" alt="Fonte" width="600">
 </p>
 
-Esse é um erro que pode ser facilmente corrigido no código Front-End na parte onde está linkado a busca da fonte vinculada.
+Esse é um erro que pode ser facilmente corrigido no código front-end, na parte onde está linkada a busca da fonte vinculada
 
 ## Fitro de funcionários ativos ##
 
-Há um erro em relação ao filtro de funcionários ativos. Quando filtrado apenas por funcionários ativos é possível notar que mesmo o funcionário "Sea Teste" que está como "Ativid 2" acaba sumindo quando ativado o filtro, algo que não era para acontecer.
+Há um erro em relação ao filtro de funcionários ativos. Quando filtrado apenas por funcionários ativos, é possível notar que, mesmo o funcionário 'Sea Teste', que está como 'Ativid 2', acaba sumindo quando o filtro é ativado, algo que não era para acontecer.
 
 Antes de ativar o filtro:
 
@@ -241,3 +243,7 @@ Com os testes realizados, tanto os automatizados quanto os manuais, foi possíve
 Minha sugestão é que a equipe de back-end faça as correções nos códigos dos campos de inserção de dados e que, além disso, sejam criados novos campos de inserção de dados, como: número de telefone do funcionário ou e-mail para contato.
 
 Sugiro também que deva ser feita uma modificação o mais breve possível, para que o site seja responsivo para aparelhos móveis, pois, com o que existe hoje, é impossível de usar em dispositivos móveis.
+
+## ⚠️ Falhas críticas: 
+
+As falhas que considero mais críticas são os problemas de validação (CPF, RG, Data de Nascimento), layout no mobile e usabilidade no back-end (filtro e exclusão de funcionários).

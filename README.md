@@ -98,4 +98,4 @@ O -relatorio e -format criam um relatório da varredura feita.
 
 ---
 
-**Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro em: [Código de teste](cypress/e2e/teste-SEA.cy.js)**
+**Você pode conferir o código que usei para fazer a simples automação dos testes dos campos de cadastro em: [Código de teste](cypress/e2e/teste-funcionalidades.cy.js)**
