@@ -17,7 +17,7 @@ Foram realizados testes manuais e testes automatizados, comparando as duas pági
 
 ---
 
-Dividi os testes em três: **Testes de Funcionalidades**, **Testes de Desing**, **Testes de Segurança**. Optei por dividir em três, para melhor compreensão das falhas encontradas.
+Dividi os testes em três: **Testes de Funcionalidades**, **Testes de Desing** e **Testes de Segurança**. Optei por dividir em três, para melhor compreensão das falhas encontradas.
 
 ---
 
@@ -25,7 +25,7 @@ Dividi os testes em três: **Testes de Funcionalidades**, **Testes de Desing**, 
 
 Para a realização dos testes feitos nas funcionalidades da página, foram utilizados três métodos, sendo eles:
 
-🔴 **1** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de alguns campos, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
+🔴 **1** - Testes automatizados, utilizando o ChromeDevTools para visualizar os elementos do site e o Cypress para automatização no teste de campos de inserção de dados, editando os códigos que simulam os cenários de preenchimento dos campos. Dessa forma, algumas funcionalidades puderam ser testadas de forma automatizada.
 
 🔴 **2** - Testes manuais na análise de elementos gráficos que estão em desconformidade com o protótipo, como fontes, textos, layouts, cores e imagens.
 
