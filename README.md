@@ -29,7 +29,7 @@ Para a realização dos testes feitos nas funcionalidades da página, foram util
 
 🔴 **2** - Testes manuais na análise de elementos gráficos que estão em desconformidade com o protótipo, como fontes, textos, layouts, cores e imagens.
 
-🔴 **3** - este básico de segurança utilizando o Nikto via distribuição Linux Mint.
+🔴 **3** - Teste básico de segurança utilizando o Nikto via distribuição Linux Mint.
 
 ---
 

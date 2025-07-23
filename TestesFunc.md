@@ -204,6 +204,14 @@ O campo de adicionar documento parece estar funcionando bem, consegui anexar um 
   <img src="Images/Pasted image 20250721082738.png" alt="Documento" width="800">
 </p>
 
+Quando cadastrado muitos funcionarios é possivel notar que onde é mostrado os usuários cadastrados acaba bugando e não tem uma função de scroll para poder ir até o ultimo funcionario cadastrado.
+
+<p align="center">
+  <img src="Images/Captura de tela_2025-07-22_20-49-40.png" alt="lista" width="700">
+</p>
+
+Minha sugestão para esse problema é que no código fosse inserido a opção de scroll para poder rolar até o fim do menu de funcionarios cadastrados.
+
 O menu do quanto esquerdo não está funcionando, quando seleciono alguma opção que não seja a que já estamos, nada acontece.
 
 <p align="center">
@@ -226,6 +234,26 @@ Realizei abrir o site no celular android e a visualização dele em mobile é co
   <img src="Images/Printmobile1.jpg" alt="Mobile" width="400">
   <img src="Images/Printmobile2.jpg" alt="Mobile" width="400">
 </p>
+
+Utilizei três códigos de automação no Cypress para simular a resolução dos dispositivos móveis de diferentes SO's.
+
+Para o IOS utilizei:
+
+```bash
+  cy.viewport('iphone-6');
+```
+
+Para tablet:
+
+```bash
+  cy.viewport('ipad-2');
+```
+
+E para android:
+
+```bash
+  cy.viewport('samsung-note9');
+```
 
 Essa é uma falha critica para o bom funcionamento do site, pois assim impossibilidade o usuário de utilizar a plataforma já que não tem usabilidade nenhuma.
 

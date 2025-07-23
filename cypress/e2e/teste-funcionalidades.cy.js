@@ -22,23 +22,19 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     cy.get('input[name="rg"]').type('123456789121212131313142312412312312313431513513123');
   
     //Preencher o campo de data de nascimento
-    cy.get('input[name="birthDay"]').type('14/08/2000');
+    cy.get('input[name="birthDay"]').type('2000-08-14');
 
     // Alterar o botão de inativo para ativo
     cy.get('button.ant-switch').click()   
     
-    //Esse comando vai verificar se o status do botão está ativo
+    //Esse comando vai verificar se o status do botão está ativo e irá retornar um log no cypress
     cy.get('button.ant-switch').then(($status) => {
         if ($status.text() === 'ativo') {
-        cy.log('O status está ativo');
-        } else {
         cy.log('O status não está ativo');
+        } else {
+        cy.log('O status está ativo');
       }
     });
-
-    cy.get('button.ant-select-select-selector').click();
-
-    cy.get('span.Cargo 02').click();
 
     // Verificar o campo de Adicionar EPI
     cy.get('span.addEPI').click();
