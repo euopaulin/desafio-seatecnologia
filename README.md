@@ -39,7 +39,7 @@ Separei os três tipos de testes feitos em três arquivos .md aqui no repositór
 
 ## [🎨Testes de design](TestesDesign.md)
 
-## [🛡️Testes de segurança](TestesSeguranca.md)
+## [🛡️Testes de segurança](TestesSeguran.md)
 
 **Passo a passo para iniciar o Cypress para testar a funcionalidade do site:**
 
