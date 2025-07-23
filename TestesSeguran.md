@@ -1,18 +1,18 @@
 ## 🕵️‍♂️ Testes de segurança
 
-Nesse case de teste foram realizados teste a respeito da segunraça do site, bem como certificados, possiveis vunerabilidades e etc.
+Nesse caso de teste foram realizados testes a respeito da segurança do site, bem como certificados, possíveis vulnerabilidades, informações do servidor e etc.
 
-Foi utilizado a ferramenta Nikto para realizar a varredura.
+Foi utilizada a ferramenta Nikto para realizar a varredura.
 
 ## O que a varredura conseguiu buscar?
 
-Essas são as informações que que a ferramenta informou no terminal:
+Essas são as informações que a ferramenta informou no terminal:
 
 <p align="center">
     <img src="Images/Captura de tela_2025-07-22_21-09-25.png" alt="segur" heigt="500">
 </p>
 
-Agora vamos interpretar o que essas informações querem dizer:
+Agora vamos interpretar o que essas informações significam:
 
 ## 🔍 Informações sobre o alvo:
 
@@ -39,5 +39,5 @@ Isso indica que o servidor permite requisições de qualquer origem (CORS). Apes
 
 ## ✅ Conclusão da varredura
 
-Apesar do site está usando HTTPS que já traz uma segurança a mais para o site, é possivel ver que o Nikto encontrou alguns problemas que devem ser levado em consideração para a segurança, ainda mais por se tratar de uma plataforma onde são inseridos dados sensiveis para cadastro de diversos funcionarios.
+Apesar de o site estar usando HTTPS, o que já traz uma segurança a mais, é possível ver que o Nikto encontrou alguns problemas que devem ser levados em consideração para a segurança, ainda mais por se tratar de uma plataforma onde são inseridos dados sensíveis para o cadastro de diversos funcionários.
 
