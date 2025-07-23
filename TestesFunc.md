@@ -98,7 +98,7 @@ Mais uma falha crítica no sistema de cadastro do site, que torna o funcionament
 
 Código para automação do campo de data de nascimento:
 ```bash
-  cy.get('input[name="birthDay"]').type('14/08/2000');
+  cy.get('input[name="birthDay"]').type('2000-08-14');
 ```
 
 Algo que difere do protótipo é que, no campo de data de nascimento, é possível notar que existe somente o campo onde será inserida a data, não sendo possível selecionar o calendário. Já no de testes, é possível selecionar a data no calendário, não apenas digitando. Talvez, nesse quesito, o site de testes seja até mais completo, porém não funciona, visto que existem falhas.
@@ -267,6 +267,8 @@ Nos três navegadores a usabilidade é a mesma e os mesmos problemas persistem.
 ## ✅ Conclusão dos testes feitos:
 
 Com os testes realizados, tanto os automatizados quanto os manuais, foi possível encontrar vários erros no site. Erros esses que comprometem a usabilidade, a experiência do usuário e até mesmo a segurança. Um usuário teria muita dificuldade para cadastrar um novo funcionário devido aos diversos bugs encontrados.
+
+Também há uma insegurança em relação aos dados sensíveis inseridos, pois essas falhas abrem brechas para o vazamento de dados ou até falsificação de dados.
 
 Minha sugestão é que a equipe de back-end faça as correções nos códigos dos campos de inserção de dados e que, além disso, sejam criados novos campos de inserção de dados, como: número de telefone do funcionário ou e-mail para contato.
 
