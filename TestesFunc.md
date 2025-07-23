@@ -57,7 +57,7 @@ Abaixo segue a imagem do teste automatizado utilizando caracteres alfabéticos.
 Para realizar esse teste, bastou eu alterar o código anterior para digitar no campo de CPF com números, porém colocando para que digitasse 'cpfnumeros'
 
 ```bash
-  cy.get('input[name="cpf"]').type('12345678901')
+  cy.get('input[name="cpf"]').type('cpfnumeros')
 ```
 
 Falha como essa compromete muito o funcionamento do site e a função de cadastrar novos funcionários, pois abre brecha para que usuários sejam cadastrados com CPFs errados, sendo, assim, uma falha crítica para o site.
@@ -121,7 +121,7 @@ O campo de alteração de sexo parece funcionar bem, não identifiquei nenhum pr
 
 Código de automação para selecionar o botão de sexo masculino:
 ```bash
-  cy.get('input[value="feminino"]').click();
+  cy.get('input[value="masculino"]').click();
 ```
 
 ---
