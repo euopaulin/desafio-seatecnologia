@@ -1,5 +1,3 @@
-const { first } = require("lodash");
-
 describe('Teste da página de cadastro de novos funcionarios', () => {
   it('Cadastrar um novo funcionario', () => {
     
@@ -14,7 +12,8 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     cy.get('input[name="name"]').type('Paulo Henrique');
 
     cy.get('input[name="cpf"]').type('12345678901');
-
+    
+    // Verificar se o campo CPF está preenchido corretamente
     cy.get('input[name="cpf"]').should('have.value', '12345678901');
 
     cy.get('input[name="rg"]').type('123456789121212131313142312412312312313431513513123');
@@ -47,9 +46,6 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     cy.get('input[name="caNumber"]').type('123456789');
 
     cy.get('button.c-dylnRB').eq(1).click();
-
-    // Seleciona o botão "Ver apenas ativos"
-    cy.get('button.isActive').click();
 
     });
   });
