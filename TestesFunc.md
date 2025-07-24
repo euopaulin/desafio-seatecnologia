@@ -15,6 +15,13 @@ Para chegar nesse botão de forma automatizada, utilizei o seguinte código no C
 ```bash
  cy.get('button.c-kUQtTK').click();
 ```
+
+Esse mesmo código só que no Selenium:
+
+```bash
+driver.find_element(By.XPATH, '//button[contains(text(), "+ Adicionar Funcionário")]').click()
+```
+
 *Usei o Chrome DevTools para identificar a classe do botão 'Adicionar Funcionário', que é 'c-kUQtTK'. Em seguida, fiz a referência no código para que, ao rodá-lo, o Cypress procurasse esse botão no site e, assim que o encontrasse, realizasse a ação de clicar. O mesmo foi feito com os outros códigos de automação presentes nesta documentação.*
 
 ---
@@ -42,6 +49,18 @@ Código utilizado para realizar essa automação:
 ```bash
  cy.get('input[name="cpf"]').should('have.value', '1234567890111');
 ```
+
+Em Selenium:
+```bash
+driver.find_element(By.CSS_SELECTOR, 'input[type="text"][name="name"]').send_keys("Paulo Henrique")
+
+driver.find_element(By.CSS_SELECTOR, 'input[type="text"][name="cpf"]').send_keys("12345678901")
+
+driver.find_element(By.CSS_SELECTOR, 'input[type="text"][name="rg"]').send_keys("123456789121212131313142312412312312313431513513123")
+
+driver.find_element(By.CSS_SELECTOR, 'input[type="date"][name="birthDay"]').send_keys("2000-08-14")
+````
+
 Esse código, além de preencher o campo, também valida se o valor é o correto.
 
 Porém, no cadastro de CPF, é possível notar uma falha. Sabemos que o CPF deve conter apenas números, mas no campo do CPF é possível digitar letras, algo que foge do padrão do CPF. Esse erro possivelmente está associado com o JavaScript da página, que provavelmente não está habilitado para restringir o campo do CPF a apenas números. Esse mesmo erro também ocorre no campo do RG.
