@@ -1,3 +1,5 @@
+const { first } = require("lodash");
+
 describe('Teste da página de cadastro de novos funcionarios', () => {
   it('Cadastrar um novo funcionario', () => {
     
@@ -7,7 +9,7 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
     cy.get('button.c-kUQtTK').click();
 
     //Os comandos abaixo vão preencher os campos do formulário de cadastro de novo funcionário
-    cy.get('input[value="fMasculino"]').click();
+    cy.get('input[value="masculino"]').click();
 
     cy.get('input[name="name"]').type('Paulo Henrique');
 
@@ -33,6 +35,21 @@ describe('Teste da página de cadastro de novos funcionarios', () => {
 
     // Verificar o campo de Adicionar EPI
     cy.get('span.addEPI').click();
+
+    cy.get('.ant-select-selector').eq(1).click();
+
+    cy.get('.ant-select-item-option-content').contains('Ativid 03').click();
+
+    cy.get('.ant-select-selector').eq(2).click();
+
+    cy.get('.ant-select-item-option-content').contains('Capacete de segurança').click();
+
+    cy.get('input[name="caNumber"]').type('123456789');
+
+    cy.get('button.c-dylnRB').eq(1).click();
+
+    // Seleciona o botão "Ver apenas ativos"
+    cy.get('button.isActive').click();
 
     });
   });

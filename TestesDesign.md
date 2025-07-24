@@ -36,6 +36,12 @@ Uma outra falha é que, no site protótipo, a caixa desses ícones possui contor
     <img src="Images/image3.png" Alt="menu2" height="100">
 </p>
 
+Quando marcado como concluido no de Testes é possivel notar que a caixa fica assim:
+
+<p align="center">
+    <img src="Images/Captura de tela_2025-07-22_20-45-59.png" alt="ima">
+</p>
+
 ## 🔻 Opções no inferior
 
 Outra falha encontrada é em relação a uma decoração de fundo na parte inferior direita. No site protótipo, existe essa decoração:

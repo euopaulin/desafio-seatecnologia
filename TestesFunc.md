@@ -204,6 +204,18 @@ O campo de adicionar documento parece estar funcionando bem, consegui anexar um 
   <img src="Images/Pasted image 20250721082738.png" alt="Documento" width="800">
 </p>
 
+
+
+Quando coloco no Cypress a automação para clicar no botão de "Ver apenas ativos" acaba dando um erro, mesmo que o meu código esteja correto. Uma falha que provavelmente é na propriedade do botão.
+
+Código usado:
+```bash
+cy.get('button.isActive').click();
+```
+<p align="center">
+  <img src="Images/Captura de tela_2025-07-23_21-07-40.png">
+</p>
+
 Quando cadastrado muitos funcionarios é possivel notar que onde é mostrado os usuários cadastrados acaba bugando e não tem uma função de scroll para poder ir até o ultimo funcionario cadastrado.
 
 <p align="center">
